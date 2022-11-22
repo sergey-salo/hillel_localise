@@ -1,0 +1,41 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.localization-work {
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 160px;
+
+  background-color: $color-accent-light;
+
+  &__title {
+    max-width: 784px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    font-size: 65px;
+  }
+
+  &__description {
+    max-width: 438px;
+    margin: 30px auto 0;
+
+    text-align: center;
+
+    font-size: 20px;
+    line-height: $line-height-xl;
+  }
+
+  &__actions {
+    margin: 55px auto 0;
+  }
+
+  &__button {
+    display: block;
+
+    margin: 0 auto;
+
+    background-color: $color-primary;
+  }
+}

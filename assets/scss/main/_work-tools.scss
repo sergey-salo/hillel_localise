@@ -1,0 +1,47 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.work-tools {
+  padding: 160px 0;
+
+  &__title {
+    max-width: 791px;
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  &__description {
+    max-width: 539px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    font-size: 25px;
+    line-height: $line-height;
+  }
+
+  &__picture {
+    margin-top: 25px;
+  }
+
+  &__image {
+    display: block;
+
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__actions {
+    margin-top: 32px;
+  }
+
+  &__button {
+    display: block;
+
+    width: 193px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

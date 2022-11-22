@@ -1,0 +1,53 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.brands {
+  margin-bottom: 100px;
+
+  background-color: $color-accent-light;
+
+  @include xl-min {
+    padding: 120px 0;
+  }
+  @include xl-lg {
+    padding: 100px 0;
+  }
+  @include lg {
+    padding: 80px 0;
+  }
+
+  &__title {
+    max-width: 720px;
+    margin: 0 auto 50px;
+  }
+
+  &__list {
+    display: grid;
+    align-items: center;
+
+    gap: $gap-lg $gap;
+    @include ul-min {
+      justify-content: space-between;
+
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    }
+    @include ul-xl {
+      justify-content: space-evenly;
+
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    }
+    @include xl-lg {
+      justify-content: space-evenly;
+
+      grid-template-columns: repeat(3, minmax(50px, max-content));
+    }
+    @include lg-md {
+      justify-content: space-evenly;
+
+      grid-template-columns: repeat(2, minmax(50px, max-content));
+    }
+    @include md {
+      justify-content: center;
+    }
+  }
+}

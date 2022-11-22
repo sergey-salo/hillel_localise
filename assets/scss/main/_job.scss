@@ -1,0 +1,125 @@
+@use "../presets" as *;
+@use "../mixins/" as *;
+
+.control,
+.quality {
+  @extend %job-control;
+
+  &__content {
+    @extend %job-content-left;
+  }
+
+  &__title {
+    @extend %job-title;
+  }
+
+  &__description {
+    @extend %job-description;
+  }
+
+  &__link {
+    @extend %job-link;
+  }
+
+  &__picture {
+    @extend %job-picture;
+  }
+
+  &__image {
+    @extend %job-image;
+  }
+}
+
+.time,
+.work {
+  flex-direction: row-reverse;
+
+  @extend %job-control;
+
+  &__content {
+    @extend %job-content-right;
+  }
+
+  &__title {
+    @extend %job-title;
+  }
+
+  &__description {
+    @extend %job-description;
+  }
+
+  &__link {
+    @extend %job-link;
+  }
+
+  &__picture {
+    @extend %job-picture;
+  }
+
+  &__image {
+    @extend %job-image;
+  }
+}
+
+%job-control {
+  display: flex;
+  align-items: center;
+
+  gap: $gap-lg;
+  @include md-min {
+    margin: 100px 0 100px;
+  }
+  @include md {
+    flex-direction: column;
+
+    margin-bottom: 70px;
+  }
+}
+
+%job-content {
+  flex-basis: 200px;
+  flex-grow: 1;
+}
+
+%job-content-left {
+  @extend %job-content;
+  @include xl-min {
+    padding-right: 100px;
+  }
+}
+
+%job-content-right {
+  @extend %job-content;
+  @include xl-min {
+    padding-left: 100px;
+  }
+}
+
+%job-title {
+  margin: 0 0 30px;
+}
+
+%job-description {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: $line-height-xl;
+}
+
+%job-link {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: $line-height-xl;
+}
+
+%job-picture {
+  flex-basis: 200px;
+  flex-grow: 1;
+
+  @include md {
+    width: 100%;
+  }
+}
+
+%job-image {
+  width: 100%;
+}

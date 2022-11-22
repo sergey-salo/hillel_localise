@@ -1,0 +1,101 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.rates {
+  padding-top: 70px;
+  padding-bottom: 80px;
+
+  background-color: $color-brown-light;
+
+  &__content {
+    display: flex;
+
+    @include xl-md {
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      gap: $gap;
+    }
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  &__description {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    @include md-min {
+      width: 809px;
+
+      column-gap: 67px;
+    }
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    @include xl-min {
+      text-align: start;
+    }
+  }
+
+  &__description-picture {
+    @include md-min {
+      order: -1;
+    }
+  }
+
+  &__platforms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    column-gap: 70px;
+    @include xl-min {
+      width: 481px;
+
+      border-left: 1px solid $color-primary;
+    }
+    @include xl {
+      margin-top: 25px;
+      padding-top: 25px;
+
+      border-top: 1px solid $color-primary;
+    }
+    @include xs {
+      flex-direction: column;
+
+      gap: $gap-lg;
+    }
+  }
+}
+
+.platform__picture {
+  width: 150px;
+  height: 37px;
+}
+
+.platform__rating-picture {
+  width: 128px;
+  height: 20px;
+  margin-top: 20px;
+}
+
+.platform__rating-image {
+  width: 100%;
+}
+
+.platform__description {
+  margin-top: 14px;
+
+  letter-spacing: 0.75px;
+
+  font-size: 15px;
+  line-height: $line-height-ul;
+}

@@ -1,0 +1,60 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.copyright {
+  padding: 48px 0;
+
+  border-top: 1px solid black;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    gap: $gap-lg;
+    @include sm {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+  }
+
+  &__picture {
+    max-width: 90px;
+    max-height: 21px;
+  }
+
+  &__description {
+    max-width: 301px;
+
+    @extend %text-style;
+  }
+
+  &__privacy-policy {
+    width: 180px;
+
+    @include sm {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &__date {
+    @extend %text-style;
+  }
+
+  &__rights {
+    @extend %text-style;
+  }
+}
+
+%text-style {
+  font-size: 12px;
+  line-height: $line-height;
+}

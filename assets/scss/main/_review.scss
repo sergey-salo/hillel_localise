@@ -1,0 +1,99 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.review {
+  background-color: $color-blue-light;
+
+  &__content {
+    display: grid;
+
+    padding: 105px 0;
+
+    @include lg-min {
+      column-gap: 85px;
+      grid-template-areas: "dsc chf" "sgn chf" "cmp chf";
+      grid-template-rows: auto 0.5fr 1fr;
+    }
+    @include lg-md {
+      align-items: start;
+
+      column-gap: 50px;
+      grid-template-areas: "dsc dsc" "chf sgn" "chf cmp";
+      grid-template-columns: 250px auto;
+      grid-template-rows: auto 0.5fr 4fr;
+    }
+    @include md-sm {
+      column-gap: 50px;
+      grid-template-areas: "dsc dsc" "chf sgn" "chf cmp";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: auto 0.5fr 2fr;
+    }
+    @include sm-xs {
+      column-gap: $gap;
+      grid-template-areas: "dsc dsc" "chf sgn" "chf cmp";
+      grid-template-columns: 175px 1fr;
+      grid-template-rows: auto 0.5fr 2fr;
+    }
+    @include xs {
+      column-gap: $gap;
+      grid-template-areas: "dsc" "chf" "sgn" "cmp";
+    }
+  }
+
+  &__quote {
+    margin: 0;
+
+    grid-area: dsc;
+    @include lg-min {
+      max-width: 892px;
+    }
+    @include lg {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__quote-description {
+    margin: 0;
+
+    font-size: 30px;
+    line-height: $line-height-lg;
+  }
+
+  &__signature {
+    font-family: $font-additional-roboto;
+    line-height: $line-height-ul;
+
+    grid-area: sgn;
+    @include lg-min {
+      padding-top: 20px;
+    }
+  }
+
+  &__chief-picture {
+    grid-area: chf;
+    @include lg-min {
+      max-width: 310px;
+      max-height: 310px;
+    }
+    @include lg-md {
+      max-width: 250px;
+      max-height: 250px;
+    }
+    @include md-sm {
+      max-width: 200px;
+      max-height: 200px;
+    }
+    @include sm {
+      max-width: 175px;
+      max-height: 175px;
+    }
+  }
+
+  &__chief-image {
+    width: 100%;
+  }
+
+  &__company-picture {
+    grid-area: cmp;
+  }
+}

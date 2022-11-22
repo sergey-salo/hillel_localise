@@ -1,0 +1,70 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.teams {
+  padding: 150px 0;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+
+    @include md {
+      align-content: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.team-item {
+  display: flex;
+  flex-direction: column;
+
+  @include md-min {
+    width: calc(100% / 3);
+  }
+  @include md {
+    width: calc(100% / 1.2);
+  }
+
+  &__title {
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 34px;
+
+    font-size: 30px;
+    line-height: $line-height-lg;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    order: -1;
+
+    height: 205px;
+    margin-top: 67px;
+  }
+
+  &__description {
+    padding-right: 30px;
+
+    font-size: 20px;
+    line-height: $line-height-xl;
+  }
+
+  &__actions {
+    margin-top: 25px;
+  }
+
+  &__link {
+    font-size: 20px;
+    line-height: $line-height-xl;
+
+    text-decoration-line: underline;
+  }
+}

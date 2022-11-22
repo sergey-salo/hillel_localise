@@ -1,0 +1,95 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+$width: 610px;
+
+.hero {
+  display: grid;
+  align-items: center;
+
+  padding: 128px 0 172px;
+
+  @include xl-min {
+    gap: 50px 0;
+    grid-template-areas: "ttl pic" "dsc pic" "act pic" "nts pic";
+    grid-template-columns: $width 1fr;
+  }
+  @include xl-lg {
+    gap: 25px 0;
+    grid-template-areas: "ttl pic" "dsc pic" "act pic" "nts pic";
+    grid-template-columns: 1fr 1fr;
+  }
+  @include lg {
+    max-width: $width;
+
+    text-align: center;
+
+    gap: $gap-lg 0;
+    grid-template-areas: "ttl" "dsc" "pic" "act" "nts";
+  }
+
+  &__title {
+    margin: 0;
+
+    grid-area: ttl;
+  }
+
+  &__description {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: $line-height-lg;
+
+    grid-area: dsc;
+    @include xl-min {
+      font-size: 25px;
+    }
+    @include xl {
+      font-size: 20px;
+    }
+    @include lg-min {
+      max-width: 470px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+
+    gap: $gap-sm;
+    grid-area: act;
+    @include lg {
+      justify-content: center;
+    }
+    @include xx {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &__notes {
+    line-height: $line-height-ul;
+
+    grid-area: nts;
+    @include xl-min {
+      margin-top: -23px;
+    }
+  }
+
+  &__picture {
+    grid-area: pic;
+  }
+
+  &__image {
+    @include xl-min {
+      width: 107%;
+      margin-left: -70px;
+    }
+    @include xl-lg {
+      width: 100%;
+    }
+    @include lg-md {
+      width: 50%;
+    }
+    @include md {
+      width: 70%;
+    }
+  }
+}

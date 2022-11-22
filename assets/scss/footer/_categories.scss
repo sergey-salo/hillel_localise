@@ -1,0 +1,143 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.footer__categories {
+  display: flex;
+
+  padding: 95px 0;
+
+  gap: 70px;
+  @include xl-md {
+    justify-content: space-between;
+  }
+  @include md {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.study__content {
+  display: flex;
+  flex-direction: column;
+
+  width: 370px;
+
+  @include md-min {
+    align-items: flex-start;
+  }
+  @include md {
+    width: 310px;
+  }
+}
+
+.study__title {
+  margin: 0;
+
+  text-align: center;
+}
+
+.study__picture,
+.study__brand-picture {
+  margin-top: 28px;
+}
+
+.study__description {
+  width: 300px;
+  margin-top: 11px;
+
+  font-size: 20px;
+  line-height: $line-height-xl;
+}
+
+.study__actions {
+  margin-top: 15px;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: $line-height-xl;
+}
+
+.categories__content {
+  display: flex;
+
+  @include xl-min {
+    justify-content: space-between;
+
+    width: 850px;
+  }
+  @include xl-md {
+    align-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 600px;
+  }
+  @include md-sm {
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 500px;
+
+    row-gap: 40px;
+  }
+  @include sm-xs {
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 400px;
+
+    row-gap: 40px;
+  }
+  @include xs {
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 310px;
+
+    row-gap: 30px;
+  }
+}
+
+.categories-item {
+  @include xl-min {
+    width: calc(100% / 4);
+  }
+  @include xl-md {
+    width: calc(100% / 2);
+  }
+  @include md-sm {
+    width: calc(100% / 2.5);
+  }
+  @include sm-xs {
+    width: calc(100% / 2);
+  }
+  @include xs {
+    width: 100%;
+  }
+
+  &__title {
+    margin: 0 0 7px;
+
+    font-size: 20px;
+    line-height: $line-height;
+
+    @include xs {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    @include xs-min {
+      width: 187px;
+    }
+  }
+}
+
+.category__item {
+  padding-top: 15px;
+
+  line-height: $line-height-sm;
+}
