@@ -1,0 +1,53 @@
+@use "../presets" as *;
+@use "mixins-media" as *;
+
+%title-lg {
+  @extend %title;
+  @include xl-min {
+    font-size: 65px;
+  }
+  @include xl-xs {
+    font-size: 50px;
+  }
+  @include xs {
+    font-size: 40px;
+  }
+}
+
+%title-md {
+  @extend %title;
+  @include xl-min {
+    font-size: 50px;
+  }
+  @include xl-xs {
+    font-size: 40px;
+  }
+  @include xs {
+    font-size: 30px;
+  }
+}
+
+%title-sm {
+  @extend %title;
+  @include xl-min {
+    font-size: 40px;
+  }
+  @include xl {
+    font-size: 30px;
+  }
+}
+
+%title-xs {
+  @extend %title;
+  @include xl-min {
+    font-size: 35px;
+  }
+  @include xl {
+    font-size: 25px;
+  }
+}
+
+%title {
+  font-weight: 600;
+  line-height: $line-height-lg;
+}

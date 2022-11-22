@@ -8,57 +8,19 @@
 }
 
 .title-lg {
-  font-weight: 600;
-  line-height: $line-height;
-
-  @include xl-min {
-    font-size: 65px;
-  }
-  @include xl-xs {
-    font-size: 50px;
-  }
-  @include xs {
-    font-size: 40px;
-  }
+  @extend %title-lg;
 }
 
 .title-md {
-  font-weight: 600;
-  line-height: $line-height;
-
-  @include xl-min {
-    font-size: 50px;
-  }
-  @include xl-xs {
-    font-size: 40px;
-  }
-  @include xs {
-    font-size: 30px;
-  }
+  @extend %title-md;
 }
 
 .title-sm {
-  font-weight: 600;
-  line-height: $line-height;
-
-  @include xl-min {
-    font-size: 40px;
-  }
-  @include xl {
-    font-size: 30px;
-  }
+  @extend %title-sm;
 }
 
 .title-xs {
-  font-weight: 600;
-  line-height: $line-height-lg;
-
-  @include xl-min {
-    font-size: 35px;
-  }
-  @include xl {
-    font-size: 25px;
-  }
+  @extend %title-xs;
 }
 
 .btn {
